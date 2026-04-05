@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Sidebar from "@/components/Sidebar";
+import Hora from "@/components/Hora";
+import Fecha from "@/components/Fecha";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +43,8 @@ export default function RootLayout({
                 width={200}
                 height={82}
                 alt="logo"
+                priority
+                className="w-[200px] h-auto"
               />
               <h1 className="text-4xl font-medium tracking-wide">
                 Módulo de Consultas
@@ -47,9 +52,9 @@ export default function RootLayout({
             </div>
 
             <div className="flex items-center gap-3 px-5">
-              <span className="text-4xl font-medium">3:34 PM</span>
-              <span className="text-lg opacity-80">Jueves 19 marzo</span>
-              <div className="w-8 h-8 rounded-full border flex items-center justify-center">
+              <span className="text-4xl font-medium"><Hora/></span>
+              <span className="text-lg opacity-80"> <Fecha/> </span>
+              <div className="w-8 h-8 flex items-center justify-center">
                 <Image
                   src="/assets/acceso.png"
                   width={32}
@@ -66,10 +71,9 @@ export default function RootLayout({
         {/*Menú lateral del sitio */}
         <div className="flex flex-1">
           <Sidebar />
-          <main className="flex-1 bg-gray-100 p-6">
-            {children}
-          </main>
-
+           <main className="w-full md:max-w-6xl mt-6 bg-white px-6 py-0">
+              {children}
+            </main>
         </div>
 
       </body>
