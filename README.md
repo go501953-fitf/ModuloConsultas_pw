@@ -3,7 +3,7 @@ Debes de tener instalado nodejs
 1. Primero lo verificas en la terminal pero en la general en la de tu computadora
 si ya lo tienes instalado verificas con los comandos:
 - node -v
-- nom -v
+- npm -v
 
 luego en el vscode cuando clones el repo con 
 - git clone https://github.com/go501953-fitf/ModuloConsultas_pw.git
