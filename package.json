@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.20.0"
+  }
+}
